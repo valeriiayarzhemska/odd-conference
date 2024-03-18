@@ -1,0 +1,294 @@
+@import '../utils/vars';
+@import '../utils/mixins';
+
+.conference {
+  font-family: 'Lato', sans-serif;
+  color: $black;
+
+  h2 {
+    font-size: 49px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $green;
+
+    @include onTablet {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 43px;
+    font-weight: 600;
+
+    @include onTablet {
+      font-size: 26px;
+    }
+  }
+
+  h4 {
+    font-size: 26px;
+    font-weight: 400;
+
+    @include onTablet {
+      font-size: 20px;
+    }
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include onTablet {
+      font-size: 12px;
+    }
+  }
+
+  &__main {
+    padding-bottom: 48px;
+    margin-bottom: 70px;
+    background-image: url('../assets/images/background-conference.png');
+    background-color: $white;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include onTablet {
+      margin-bottom: 54px;
+    }
+
+    @include onPhone {
+      padding-bottom: 16px;
+    }
+
+    &-date {
+      @include flexColumnAlignCenter;
+      position: absolute;
+      top: 66px;
+      right: 216px;
+
+      @include onDesktopSmall {
+        top: 36px;
+      }
+
+      @include onDesktopMini {
+        right: 48px;
+      }
+
+      @include onTablet {
+        right: 22px;
+      }
+
+      &-text {
+        font-size: 27px;
+        font-weight: 600;
+        color: $black;
+        text-transform: uppercase;
+
+        @include onTablet {
+          font-size: 16px;
+        }
+      }
+
+      &-text--day {
+        font-size: 37px;
+
+        @include onTablet {
+          font-size: 23px;
+        }
+      }
+
+      &-text--month {
+        margin: -3px 0 2px 0;
+      }
+
+      &-text--time {
+        padding: 1px 12px;
+        font-size: 14px;
+        color: $white;
+        background-color: $orange;
+        border-radius: 50px;
+
+        @include onTablet {
+          padding: 2px 7px;
+          font-size: 9px;
+        }
+      }
+    }
+
+    &-description {
+      @include flexJustifyBetweenAlignEnd;
+      margin-bottom: 86px;
+      padding-right: 110px;
+
+      @include onDesktopSmall {
+        padding-right: 216px;
+      }
+
+      @include onDesktopMini {
+        padding-right: 48px;
+      }
+
+      @include onTablet {
+        @include flexColumnAlignStart;
+        gap: 38px;
+        margin-bottom: 70px;
+        padding-right: 22px;
+      }
+    }
+
+    &-titles {
+      position: relative;
+      @include flexColumnAlignStart;
+      gap: 7px;
+      margin-left: 32%;
+      padding: 81px 0 0 10px;
+      border-left: 1px solid $green;
+
+      @include onDesktopSmall {
+        padding: 41px 0 0 10px;
+      }
+
+      @include onDesktopMicro {
+        margin-left: 28%;
+      }
+
+      @include onPhone {
+        padding: 81px 0 0 10px;
+        margin-left: 62px;
+      }
+    }
+
+    &-subtitle {
+      &-left {
+        position: absolute;
+        top: 139px;
+        left: -108px;
+        transform: rotate(-90deg);
+
+        @include onTablet {
+          top: 114px;
+          left: -85px;
+        }
+
+        @include onPhone {
+          top: 154px;
+        }
+      }
+
+      &-left span {
+        font-size: 30px;
+        color: $purple;
+
+        @include onTablet {
+          font-size: 23px;
+        }
+      }
+
+      &-mark span {
+        padding: 6px 21px;
+        font-size: 12px;
+        color: $white;
+        background-color: $purple;
+        border-radius: 50px;
+
+        @include onTablet {
+          padding: 2px 10.5px;
+          font-size: 9px;
+        }
+      }
+    }
+
+    &-info {
+      @include flexAlignCenter;
+      gap: 10px;
+
+      @include onTablet {
+        margin-left: 28%;
+        padding-left: 10px;
+      }
+
+      @include onPhone {
+        margin-left: 62px;
+      }
+
+      &-part {
+        @include flexAlignCenter;
+        gap: 4px;
+      }
+
+      &-part span {
+        font-size: 14px;
+        color: $black;
+
+        @include onTablet {
+          font-size: 12px;
+        }
+      }
+
+      &-part:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid $black;
+      }
+    }
+
+    &-swiper {
+      padding: 0 110px !important;
+      max-width: 1645px;
+      -webkit-overflow-scrolling: touch;
+
+      @include onDesktopSmall {
+        padding: 0 216px !important;
+        max-width: 1160px;
+      }
+
+      @include onDesktopMini {
+        padding: 0 48px !important;
+      }
+
+      @include onTablet {
+        padding: 0 22px !important;
+      }
+
+      @include onPhone {
+        padding: 0 4px !important;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-photo {
+      @include flexAlignCenter;
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+
+      @include onDesktopSmall {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include onPhone {
+        width: 62px;
+        height: 62px !important;
+      }
+    }
+
+    &-photo img {
+      @include fullImageContainerCover;
+      border-radius: 100%;
+    }
+
+    &-organisator span {
+      display: none;
+      font-size: 14px;
+      color: $black;
+
+      @include onPhone {
+        display: block;
+        margin-left: 62px;
+        font-size: 12px;
+      }
+    }
+  }
+}
