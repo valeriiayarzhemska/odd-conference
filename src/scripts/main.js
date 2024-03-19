@@ -48,5 +48,26 @@ $(document).ready(function () {
     },
   });
 
+  const swiperConferenceSpeakers = new Swiper('.conference__speakers-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grid: {
+      rows: 4,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+
+    navigation: {
+      nextEl: '.conference__speakers-swiper-button-next',
+      prevEl: '.conference__speakers-swiper-button-prev',
+    },
+  });
+
   addNumberClassTarget();
 });
