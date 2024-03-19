@@ -44,19 +44,19 @@
     }
   }
 
+  p,
+  span {
+    color: $black;
+  }
+
   &__main {
     padding-bottom: 48px;
-    margin-bottom: 70px;
     background-image: url('../assets/images/background-conference.png');
     background-color: $white;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @include onTablet {
-      margin-bottom: 54px;
-    }
 
     @include onPhone {
       padding-bottom: 16px;
@@ -67,6 +67,10 @@
       position: absolute;
       top: 66px;
       right: 216px;
+
+      @include onDesktopMiddle {
+        right: 140px;
+      }
 
       @include onDesktopSmall {
         top: 36px;
@@ -120,10 +124,10 @@
     &-description {
       @include flexJustifyBetweenAlignEnd;
       margin-bottom: 86px;
-      padding-right: 110px;
+      padding-right: 216px;
 
-      @include onDesktopSmall {
-        padding-right: 216px;
+      @include onDesktopMiddle {
+        padding-right: 140px;
       }
 
       @include onDesktopMini {
@@ -290,5 +294,396 @@
         font-size: 12px;
       }
     }
+  }
+
+  &__about {
+    @include flexJustifyBetweenAlignStart;
+    gap: 102px;
+    padding: 70px 0 54px 216px;
+
+    @include onDesktopMiddle {
+      padding: 70px 0 54px 140px;
+    }
+
+    @include onDesktopMini {
+      padding: 70px 0 54px 48px;
+    }
+
+    @include onTablet {
+      @include flexColumnJustifyCenterAlignStart;
+      gap: 40px;
+      padding: 54px 0 0 0;
+    }
+
+    &-info {
+      @include flexColumn;
+      gap: 40px;
+      flex: 0.52;
+      width: 52%;
+
+      @include onTablet {
+        gap: 32px;
+        flex: 1;
+        padding: 0 22px;
+        width: 100%;
+      }
+    }
+
+    &-description {
+      @include flexColumn;
+      gap: 14px;
+      font-size: 16px;
+      font-weight: 400;
+
+      @include onTablet {
+        gap: 10px;
+      }
+
+      &-bg {
+        position: absolute;
+        top: -8px;
+        left: -6px;
+        z-index: -1;
+      }
+
+      span {
+        position: relative;
+      }
+    }
+
+    &-description--marked {
+      font-size: 20px;
+      font-weight: 600;
+
+      @include onTablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-description--bold {
+      font-weight: 600;
+
+      @include onTablet {
+        margin-top: 16px;
+      }
+    }
+
+    &-swiper {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      width: 100%;
+
+      &-container {
+        position: relative;
+      }
+
+      &-button {
+        &-prev {
+          left: 20px !important;
+
+          @include onPhone {
+            left: -12px !important;
+          }
+        }
+
+        &-next {
+          right: 20px !important;
+
+          @include onPhone {
+            right: -12px !important;
+          }
+        }
+      }
+
+      &-slide {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        height: 134px !important;
+        padding: 10px 116px;
+        background-color: $light-green;
+        border-radius: 30px;
+
+        @include onPhone {
+          padding: 10px 34px;
+        }
+
+        &-text {
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @include onPhone {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &-themes {
+      width: 100%;
+
+      &-container {
+        @include flexColumn;
+        gap: 16px;
+        flex: 0.48;
+        width: 100%;
+
+        @include onTablet {
+          gap: 9px;
+          flex: 1;
+        }
+      }
+
+      &-title {
+        @include onTablet {
+          padding-left: 20px;
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-theme {
+      padding: 26px 0 10px 0;
+      border-bottom: 1px solid $gray;
+
+      @include onTablet {
+        padding: 24px 52px;
+      }
+
+      h4 {
+        max-width: 432px;
+      }
+    }
+  }
+
+  &__targets {
+    position: relative;
+    padding: 100px 300px 0 300px;
+    background-color: $bg-green;
+    overflow: hidden;
+
+    @include onDesktopMiddle {
+      padding: 100px 144px 0 144px;
+    }
+
+    @include onDesktopMicro {
+      padding: 100px 140px 0 48px;
+    }
+
+    @include onTablet {
+      padding: 55px 22px 0 22px;
+    }
+
+    &-container {
+      position: relative;
+
+      @include onTablet {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        width: 100%;
+      }
+    }
+
+    &-content {
+      @include flexJustifyCenter;
+      gap: 110px;
+
+      @include onDesktopMicro {
+        gap: 20px;
+      }
+
+      @include onTablet {
+        @include flexColumnAlignStart;
+        gap: 36px;
+      }
+    }
+
+    &-info {
+      @include flexColumn;
+      gap: 26px;
+      padding-top: 110px;
+
+      @include onTablet {
+        padding-top: 0;
+        gap: 16px;
+      }
+    }
+
+    &-title {
+      max-width: 400px;
+
+      @include onTablet {
+        max-width: 314px;
+      }
+    }
+
+    &-image {
+      @include onTablet {
+        display: none;
+      }
+    }
+
+    &-image-mobile {
+      display: none;
+      position: absolute;
+      top: 230px;
+
+      @include onTablet {
+        display: block;
+        left: 5px;
+      }
+
+      @include onPhone {
+        left: -110px;
+      }
+
+      img {
+        height: 300px;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 170px;
+      left: 210px;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+
+    &-target {
+      position: absolute;
+
+      @include onTablet {
+        position: static;
+        display: flex;
+        gap: 6px;
+      }
+
+      &-ellipse {
+        @include onTablet {
+          padding-top: 4px;
+        }
+
+        @include onPhone {
+          padding-top: 2px;
+        }
+
+        img {
+          width: 57px;
+          height: 57px;
+
+          @include onTablet {
+            width: 9px;
+            height: 9px;
+          }
+        }
+      }
+
+      &-description {
+        position: absolute;
+        width: 170px;
+        top: 32px;
+        left: 22px;
+
+        @include onTablet {
+          position: static;
+          width: 430px;
+        }
+
+        @include onPhone {
+          width: 192px;
+          line-height: 12px;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+
+          @include onPhone {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &-target--1 {
+      bottom: 130px;
+      left: 64px;
+    }
+
+    &-target--2 {
+      top: 290px;
+    }
+
+    &-target--3 {
+      top: 163px;
+      left: 18px;
+    }
+
+    &-target--4 {
+      top: 54px;
+      left: 100px;
+    }
+
+    &-target--5 {
+      top: 4px;
+      left: 230px;
+    }
+
+    &-target--6 {
+      top: 54px;
+      right: 100px;
+    }
+
+    &-target--7 {
+      top: 163px;
+      right: 18px;
+    }
+
+    &-target--8 {
+      top: 290px;
+      right: -6px;
+    }
+
+    &-target--9 {
+      bottom: 130px;
+      right: 64px;
+    }
+
+    &-button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    z-index: 2 !important;
+  }
+
+  .swiper-button-prev {
+    transform: rotate(-180deg);
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: '';
+    display: none;
   }
 }

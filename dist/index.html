@@ -168,7 +168,7 @@
       <section class="conference__about">
         <div class="conference__about-info">
           <div class="conference__about-description">
-            <span>
+            <span class="conference__about-description--marked">
               Світ продовжує перевіряти життєздатність і сталість організацій
               своїми постійними змінами, чи то політичними, економічними,
               кліматичними, чи будь-якими іншими.
@@ -177,7 +177,7 @@
             <span>
               На жаль, на цьому шляху більшість компаній занепадають і
               припиняють свою діяльність, але є й ті, хто можуть не просто
-              виживати в кризи,  а й процвітати у непередбачуваному світі.
+              виживати в кризи, а й процвітати у непередбачуваному світі.
             </span>
 
             <span>
@@ -185,71 +185,264 @@
               Наша відповідь - це стійкість!
             </span>
 
-            <div class="conference__about-description">
-              <img src="src/assets/icons/bg-element.svg" alt="speaker" />
-            </div>
-
             <span>
-              Стійкість – це про стан буття. Стійка організація не чекає, поки
-              криза завершиться, щоб повернутись до ведення бізнесу у звичному
-              форматі. Натомість вона змінюється разом із навколишнім
-              середовищем, створюючи у своїй ДНК нові погляди, переконання,
-              підходи і структури, які не просто забезпечують відновлення. Вони
-              рухають організацію вперед — швидко.
+              <img
+                class="conference__about-description-bg"
+                src="src/assets/icons/bg-element.svg"
+                alt=""
+              />
+
+              <span class="conference__about-description--bold">
+                Стійкість – це про стан буття.
+              </span>
+              Стійка організація не чекає, поки криза завершиться, щоб
+              повернутись до ведення бізнесу у звичному форматі. Натомість вона
+              змінюється разом із навколишнім середовищем, створюючи у своїй ДНК
+              нові погляди, переконання, підходи і структури, які не просто
+              забезпечують відновлення. Вони рухають організацію вперед —
+              швидко.
             </span>
 
             <span>
               На нашій конференції цього року ми поговоримо про те, як долати
-              зміни  та впливати на них, як із впевненістю приймати виклики та
-              вчитися  на досвіді. Наша мета - допомогти українським компаніям
+              зміни та впливати на них, як із впевненістю приймати виклики та
+              вчитися на досвіді. Наша мета - допомогти українським компаніям
               підтримувати свою конкурентну перевагу та збільшувати
-              прибутковість, незважаючи  на несподівані події в світі.
+              прибутковість, незважаючи на несподівані події в світі.
             </span>
           </div>
 
-          <div class="swiper conference__about-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide conference__about-swiper-slide">
-                <div class="swiper-slide conference__about-swiper-icon">
-                  <img src="src/assets/images/speaker1.jpg" alt="speaker" />
+          <div class="conference__about-swiper-container">
+            <div class="swiper conference__about-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide conference__about-swiper-slide">
+                  <div class="conference__about-swiper-slide-icon">
+                    <img
+                      src="src/assets/icons/question-mark.svg"
+                      alt="speaker"
+                    />
+                  </div>
+
+                  <div class="conference__about-swiper-slide-text">
+                    <span>
+                      Чи вдається українським компаніям вийти зі стадії
+                      виживання і відновити свій розвиток?
+                    </span>
+                  </div>
                 </div>
 
-                <div class="swiper-slide conference__about-swiper-text">
-                  <span>
-                    Чи вдається українським компаніям вийти зі стадії виживання
-                    і відновити свій розвиток?
-                  </span>
+                <div class="swiper-slide conference__about-swiper-slide">
+                  <div class="conference__about-swiper-slide-icon">
+                    <img
+                      src="src/assets/icons/question-mark.svg"
+                      alt="speaker"
+                    />
+                  </div>
+
+                  <div class="conference__about-swiper-slide-text">
+                    <span>
+                      Чи вдається українським компаніям вийти зі стадії
+                      виживання і відновити свій розвиток?
+                    </span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide conference__about-swiper-slide">
+                  <div class="conference__about-swiper-slide-icon">
+                    <img
+                      src="src/assets/icons/question-mark.svg"
+                      alt="speaker"
+                    />
+                  </div>
+
+                  <div class="conference__about-swiper-slide-text">
+                    <span>
+                      Чи вдається українським компаніям вийти зі стадії
+                      виживання і відновити свій розвиток?
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div class="swiper-slide conference__about-swiper-slide">
-                <div class="swiper-slide conference__about-swiper-icon">
-                  <img src="src/assets/images/speaker1.jpg" alt="speaker" />
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="conference__about-swiper-buttons-wrapper">
+              <div class="conference__about-swiper-buttons">
+                <div
+                  class="swiper-button-prev conference__about-swiper-button-prev"
+                >
+                  <img
+                    src="src/assets/icons/purple-arrow-icon.svg"
+                    alt="arrow"
+                  />
                 </div>
 
-                <div class="swiper-slide conference__about-swiper-text">
-                  <span>
-                    Чи вдається українським компаніям вийти зі стадії виживання
-                    і відновити свій розвиток?
-                  </span>
-                </div>
-              </div>
-
-              <div class="swiper-slide conference__about-swiper-slide">
-                <div class="swiper-slide conference__about-swiper-icon">
-                  <img src="src/assets/images/speaker1.jpg" alt="speaker" />
-                </div>
-
-                <div class="swiper-slide conference__about-swiper-text">
-                  <span>
-                    Чи вдається українським компаніям вийти зі стадії виживання
-                    і відновити свій розвиток?
-                  </span>
+                <div
+                  class="swiper-button-next conference__about-swiper-button-next"
+                >
+                  <img
+                    src="src/assets/icons/purple-arrow-icon.svg"
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
+        </div>
+
+        <div class="conference__about-themes-container">
+          <div class="conference__about-themes-title">
+            <span>Теми конференції:</span>
+          </div>
+
+          <div class="conference__about-themes">
+            <div class="conference__about-theme">
+              <h4>Стратегії</h4>
+            </div>
+
+            <div class="conference__about-theme">
+              <h4>Бізнес-моделі</h4>
+            </div>
+
+            <div class="conference__about-theme">
+              <h4>Операційні моделі та організаційний дизайн</h4>
+            </div>
+
+            <div class="conference__about-theme">
+              <h4>Управління змінами</h4>
+            </div>
+
+            <div class="conference__about-theme">
+              <h4>Корпоративна культура</h4>
+            </div>
+
+            <div class="conference__about-theme">
+              <h4>Mental health</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="conference__targets">
+        <div class="conference__targets-content">
+          <div class="conference__targets-info">
+            <div class="conference__targets-logo">
+              <img src="src/assets/icons/logo-white.png" alt="logo" />
+            </div>
+
+            <div class="conference__targets-title">
+              <h3>Відвідування конференції буде цікавим для:</h3>
+            </div>
+          </div>
+
+          <div class="conference__targets-image-mobile">
+            <img src="src/assets/images/target-image.png" alt="target" />
+          </div>
+
+          <div class="conference__targets-container">
+            <div class="conference__targets-image">
+              <img src="src/assets/images/target-image.png" alt="target" />
+            </div>
+
+            <div class="conference__targets-icon">
+              <img src="src/assets/icons/white-element.svg" alt="" />
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Спеціалісти з організаційного розвитку та змін</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Організаційні дизайнери</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Chief / Head of Transformations</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>CHROs</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Бізнес-лідери</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Head of PMO</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>CEO / Власники бізнесів</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Спеціалісти з agile методології</span>
+              </div>
+            </div>
+
+            <div class="conference__targets-target">
+              <div class="conference__targets-target-ellipse">
+                <img src="src/assets/icons/ellipse-green.svg" alt="" />
+              </div>
+
+              <div class="conference__targets-target-description">
+                <span>Експерти з лідерства та корпоративної культури</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="conference__targets-button button-conference">
+          <a href="" class="button-conference__link">Взяти участь</a>
         </div>
       </section>
     </main>

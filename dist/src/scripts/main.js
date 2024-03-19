@@ -1,6 +1,14 @@
+let numberTarget = 1;
+function addNumberClassTarget() {
+  const targets = $('.conference__targets-target');
+  const targetClass = 'conference__targets-target--';
+  targets.each(function () {
+    $(this).addClass(`${targetClass}${numberTarget}`);
+    numberTarget++;
+  });
+}
 $(document).ready(function () {
-  console.log('1');
-  const swiper = new Swiper('.conference__main-swiper', {
+  const swiperConferenceMain = new Swiper('.conference__main-swiper', {
     direction: 'horizontal',
     slidesPerView: 5.4,
     freeMode: true,
@@ -25,4 +33,13 @@ $(document).ready(function () {
       }
     }
   });
+  const swiperConferenceAbout = new Swiper('.conference__about-swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.conference__about-swiper-button-next',
+      prevEl: '.conference__about-swiper-button-prev'
+    }
+  });
+  addNumberClassTarget();
 });

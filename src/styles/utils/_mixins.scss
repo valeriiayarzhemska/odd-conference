@@ -150,6 +150,11 @@
   align-items: flex-end;
 }
 
+@mixin flexJustifyBetweenAlignNo {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin flexJustifyEndAlignCenter {
   display: flex;
   justify-content: flex-end;

@@ -5,6 +5,11 @@
     padding-left: 216px;
     padding-right: 216px;
 
+    @include onDesktopMiddle {
+      padding-left: 140px;
+      padding-right: 140px;
+    }
+
     @include onDesktopMini {
       padding-left: 48px;
       padding-right: 48px;
