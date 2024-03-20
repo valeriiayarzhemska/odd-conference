@@ -1397,6 +1397,68 @@
     }
   }
 
+  &__faqs {
+    @include flexColumn;
+    gap: 40px;
+
+    @include onTablet {
+      gap: 28px;
+    }
+
+    &-question {
+      @include flexAlignStart;
+      gap: 58px;
+      padding-bottom: 54px;
+      border-bottom: 1px solid $gray;
+
+      @include onTablet {
+        padding-bottom: 30px;
+      }
+
+      @include onPhone {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-container {
+        @include flexColumn;
+        gap: 54px;
+        padding: 0 112px;
+
+        @include onTablet {
+          gap: 30px;
+          padding: 0 20px;
+        }
+
+        @include onPhone {
+          padding: 0;
+        }
+      }
+
+      &-title {
+        flex: 0.5;
+
+        h4 {
+          font-weight: 600;
+        }
+      }
+
+      &-description {
+        @include flexColumn;
+        gap: 20px;
+        flex: 0.5;
+
+        span {
+          font-size: 14px;
+
+          @include onTablet {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
   &__button-take-part {
     position: absolute;
     bottom: -22px;
