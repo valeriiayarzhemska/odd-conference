@@ -21,6 +21,15 @@
     }
   }
 
+  &__container--sliders {
+    padding-top: 114px;
+    padding-bottom: 60px;
+
+    @include onTablet {
+      padding-top: 108px;
+    }
+  }
+
   &__container-scroll--disable {
     overflow-y: hidden;
   }

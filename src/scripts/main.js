@@ -81,6 +81,31 @@ $(document).ready(function () {
     },
   });
 
+  const swiperConferenceOrganizators = new Swiper(
+    '.conference__organizators-swiper',
+    {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      grid: {
+        rows: 3,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          grid: {
+            rows: 1,
+          },
+        },
+      },
+
+      navigation: {
+        nextEl: '.conference__organizators-swiper-button-next',
+        prevEl: '.conference__organizators-swiper-button-prev',
+      },
+    }
+  );
+
   // conference add target classes
   addNumberClassTarget();
 
