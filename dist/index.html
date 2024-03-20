@@ -19,13 +19,13 @@
   </head>
 
   <body class="">
-    <header class="header-conference page-conference__container">
-  <nav class="nav-conference">
-    <div class="nav-conference__content">
-      <div class="nav-conference__logo">
+    <header class="conference__header page-conference__container">
+  <nav class="conference__nav">
+    <div class="conference__nav-content">
+      <div class="conference__nav-logo">
         <a href="#">
           <img
-            class="nav-conference__logo-image"
+            class="conference__nav-logo-image"
             src="src/assets/icons/logo.png"
             alt="logo"
           />
@@ -34,29 +34,29 @@
         </a>
       </div>
 
-      <ul class="nav-conference__list">
-        <li class="nav-conference__item">
-          <a href="#" class="nav-conference__link">Про подію</a>
+      <ul class="conference__nav-list">
+        <li class="conference__nav-item">
+          <a href="#" class="conference__nav-link">Про подію</a>
         </li>
 
-        <li class="nav-conference__item">
-          <a href="#" class="nav-conference__link">Спікери</a>
+        <li class="conference__nav-item">
+          <a href="#" class="conference__nav-link">Спікери</a>
         </li>
 
-        <li class="nav-conference__item">
-          <a href="#" class="nav-conference__link">Програма</a>
+        <li class="conference__nav-item">
+          <a href="#" class="conference__nav-link">Програма</a>
         </li>
 
-        <li class="nav-conference__item">
-          <a href="#" class="nav-conference__link">Вартість</a>
+        <li class="conference__nav-item">
+          <a href="#" class="conference__nav-link">Вартість</a>
         </li>
 
-        <li class="nav-conference__item">
-          <a href="#" class="nav-conference__link">FAQ</a>
+        <li class="conference__nav-item">
+          <a href="#" class="conference__nav-link">FAQ</a>
         </li>
       </ul>
 
-      <div class="nav-conference__button button-conference">
+      <div class="conference__nav-button button-conference">
         <a href="" class="button-conference__link">Взяти участь</a>
       </div>
     </div>
@@ -1359,10 +1359,157 @@
           </div>
         </div>
       </section>
+
+      <section
+        class="conference__contact-us page-conference__container page-conference__container--full"
+      >
+        <div class="conference__contact-us-title">
+          <h3>Залишились запитання?</h3>
+        </div>
+
+        <div class="conference__form-container">
+          <form
+            id="conference-contact-us-form"
+            action=""
+            method="post"
+            class="conference__form"
+          >
+            <div class="conference__form-inputs-container">
+              <div class="conference__form-inputs">
+                <div class="conference__form-label-container">
+                  <label>
+                    <div class="conference__form-input-placeholder">
+                      <span>Вкажіть ваше ім’я*</span>
+                    </div>
+
+                    <div class="conference__form-input-container">
+                      <input id="name" name="name" />
+                    </div>
+                  </label>
+                </div>
+
+                <div class="conference__form-label-container">
+                  <label>
+                    <div class="conference__form-input-placeholder">
+                      <span>Ваш номер телефону*</span>
+                    </div>
+
+                    <div class="conference__form-input-container">
+                      <input id="phone" name="phone" placeholder="+38" />
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="conference__form-inputs conference__form-inputs--full"
+              >
+                <div class="conference__form-label-container">
+                  <label>
+                    <div class="conference__form-input-placeholder">
+                      <span>Ваш e-mail*</span>
+                    </div>
+
+                    <div class="conference__form-input-container">
+                      <input id="email" name="email" type="email" />
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="conference__form-inputs conference__form-inputs--full"
+              >
+                <div
+                  class="conference__form-label-container conference__form-label-container--textarea"
+                >
+                  <label>
+                    <div class="conference__form-input-placeholder">
+                      <span>
+                        Сформуйте ваше запитання, або ми вам передзвонимо
+                      </span>
+                    </div>
+
+                    <div class="conference__form-textarea-container">
+                      <textarea id="question" name="question"></textarea>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="conference__form-submit-container">
+              <input
+                class="submit button-conference__link button-conference__link--submit"
+                type="submit"
+                value="Відправити"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer class="page__container footer">
- 
+    <footer class="conference__footer page-conference__container">
+  <div class="conference__footer-content">
+    <div class="conference__footer-logo">
+      <a href="#">
+        <img
+          class="conference__footer-logo-image"
+          src="src/assets/icons/logo.png"
+          alt="logo"
+        />
+
+        OD&D
+      </a>
+    </div>
+
+    <ul class="conference__footer-list">
+      <li class="conference__footer-item">
+        <a href="#" class="conference__footer-link">Про подію</a>
+      </li>
+
+      <li class="conference__footer-item">
+        <a href="#" class="conference__footer-link">Спікери</a>
+      </li>
+
+      <li class="conference__footer-item">
+        <a href="#" class="conference__footer-link">Програма</a>
+      </li>
+
+      <li class="conference__footer-item">
+        <a href="#" class="conference__footer-link">Вартість</a>
+      </li>
+
+      <li class="conference__footer-item">
+        <a href="#" class="conference__footer-link">FAQ</a>
+      </li>
+    </ul>
+
+    <div class="conference__footer-logo">
+      <a href="#">
+        <img
+          class="conference__footer-logo-image"
+          src="src/assets/icons/logo.png"
+          alt="logo"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div class="conference__footer-links">
+    <div class="conference__footer-link">
+      <img src="src/assets/icons/linkedin.svg" alt="linkedin" />
+    </div>
+
+    <div class="conference__footer-link">
+      <img src="src/assets/icons/facebook.svg" alt="facebook" />
+    </div>
+  </div>
+
+  <div class="conference__footer-rights">
+    <span>2024. All rights reserved.</span>
+  </div>
 </footer>
 
 

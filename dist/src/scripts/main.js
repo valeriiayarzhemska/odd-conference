@@ -117,4 +117,61 @@ $(document).ready(function () {
   $('.conference__programm-date-button').on('click', function () {
     handleProgrammDateClick($(this));
   });
+
+  // conference contact-us form
+  $('#conference-contact-us-form').submit(function (e) {
+    e.preventDefault();
+  }).validate({
+    errorElement: 'span',
+    rules: {
+      name: {
+        required: true
+      },
+      phone: {
+        required: true,
+        digits: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      question: {
+        required: true
+      }
+    },
+    messages: {
+      name: {
+        required: ''
+      },
+      phone: {
+        required: '',
+        digits: ''
+      },
+      email: {
+        required: '',
+        email: ''
+      },
+      question: {
+        required: ''
+      }
+    },
+    highlight: function (element) {
+      $(element).closest('.conference__form-label-container').addClass('conference__form-label-container-error');
+    },
+    unhighlight: function (element) {
+      $(element).closest('.conference__form-label-container').removeClass('conference__form-label-container-error');
+    },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        url: form.action,
+        type: form.method,
+        data: $(form).serialize(),
+        success: function (response) {},
+        error: function (xhr, status, error) {
+          console.log('Error: ', error);
+        }
+      });
+    }
+  });
 });

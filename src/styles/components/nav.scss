@@ -1,16 +1,16 @@
 @import '../utils/vars';
 @import '../utils/mixins';
 
-.header-conference {
+.conference__header {
   background-color: $white;
 }
 
-.nav-conference {
-  &__content {
+.conference__nav {
+  &-content {
     @include flexJustifyAlignBetween;
   }
 
-  &__logo {
+  &-logo {
     padding: 22px 0;
 
     @include onPhone {
@@ -18,7 +18,7 @@
     }
   }
 
-  &__logo > a {
+  &-logo > a {
     @include flexAlignCenter;
     gap: 15px;
     font-family: 'Lato', sans-serif;
@@ -32,7 +32,7 @@
     }
   }
 
-  &__list {
+  &-list {
     @include flexAlignCenter;
     gap: 20px;
 
@@ -41,7 +41,7 @@
     }
   }
 
-  &__link {
+  &-link {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 600;
