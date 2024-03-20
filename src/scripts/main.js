@@ -11,7 +11,19 @@ function addNumberClassTarget() {
   });
 }
 
+function handleProgrammDateClick(button) {
+  const buttons = $('.conference__programm-date-button');
+  const buttonActiveClass = 'conference__programm-date-button--active';
+
+  buttons.each(function () {
+    $(this).removeClass(buttonActiveClass);
+  });
+
+  button.addClass(buttonActiveClass);
+}
+
 $(document).ready(function () {
+  // coference swipers
   const swiperConferenceMain = new Swiper('.conference__main-swiper', {
     direction: 'horizontal',
     slidesPerView: 5.4,
@@ -69,5 +81,11 @@ $(document).ready(function () {
     },
   });
 
+  // conference add target classes
   addNumberClassTarget();
+
+  // conference click date
+  $('.conference__programm-date-button').on('click', function () {
+    handleProgrammDateClick($(this));
+  });
 });

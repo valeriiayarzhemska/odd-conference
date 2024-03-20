@@ -61,6 +61,7 @@
 
     @include onPhone {
       padding-bottom: 16px;
+      background-position: left;
     }
 
     &-date {
@@ -683,21 +684,17 @@
       bottom: 130px;
       right: 64px;
     }
-
-    &-button {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 2;
-    }
   }
 
   &__speakers {
+    position: relative;
     padding-top: 114px;
     padding-bottom: 30px;
     overflow: hidden;
+
+    @include onTablet {
+      padding-top: 76px;
+    }
 
     &-wave {
       position: absolute;
@@ -711,6 +708,11 @@
 
       @include onDesktopSmall {
         bottom: -20px;
+      }
+
+      @include onTablet {
+        bottom: -38px;
+        left: -280px;
       }
 
       img {
@@ -742,17 +744,22 @@
 
     &-swiper {
       @include onTablet {
-        height: 630px;
+        height: 650px;
       }
 
       &-container {
         position: relative;
+
         @include onDesktopMini {
           padding: 0 72px;
         }
 
         @include onDesktopMicro {
           padding: 0 20px;
+        }
+
+        @include onPhone {
+          padding: 0 0;
         }
       }
 
@@ -831,6 +838,318 @@
         }
       }
     }
+  }
+
+  &__programm {
+    @include flexColumn;
+    gap: 120px;
+    padding-top: 122px;
+    padding-bottom: 70px;
+    overflow: hidden;
+
+    @include onTablet {
+      padding-top: 78px;
+      padding-top: 122px;
+      gap: 60px;
+    }
+
+    &-wave,
+    &-wave-mobile {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+    }
+
+    &-wave {
+      bottom: -170px;
+
+      @include onDesktopWide {
+        bottom: -56px;
+      }
+
+      @include onDesktopSmall {
+        bottom: 0;
+      }
+
+      @include onTablet {
+        display: none;
+      }
+
+      img {
+        width: 100vw;
+
+        @include onDesktopMicro {
+          width: auto;
+        }
+      }
+    }
+
+    &-wave-mobile {
+      display: none;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 1080px;
+
+      @include onTablet {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-titles {
+      @include flexJustifyAlignBetween;
+
+      @include onTablet {
+        @include flexColumnAlignStart;
+        gap: 16px;
+      }
+    }
+
+    &-title {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: -1;
+
+        @include onTablet {
+          display: none;
+        }
+      }
+    }
+
+    &-date {
+      &-buttons {
+        @include flexAlignCenter;
+        gap: 2px;
+
+        @include onTablet {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+
+      &-button {
+        @include flexJustifyAlignCenter;
+
+        span {
+          padding: 4px 26px;
+          border-radius: 40px;
+          font-size: 38px;
+          font-weight: 600;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+
+          @include onTablet {
+            padding: 4px 20px;
+            font-size: 24px;
+          }
+        }
+      }
+
+      &-button:hover {
+        span {
+          color: $white;
+          background-color: $orange;
+        }
+      }
+
+      &-button--active {
+        span {
+          color: $white;
+          background-color: $orange;
+        }
+      }
+    }
+
+    &-schedule {
+      @include flexColumn;
+      gap: 8px;
+      padding-bottom: 54px;
+      border-bottom: 1px solid $gray;
+
+      @include onTablet {
+        padding-bottom: 30px;
+      }
+
+      &-container {
+        @include flexColumn;
+        gap: 54px;
+        padding: 0 112px;
+
+        @include onTablet {
+          gap: 30px;
+          padding: 0 20px;
+        }
+
+        @include onPhone {
+          padding: 0;
+        }
+      }
+
+      &-title {
+        h4 {
+          font-weight: 600;
+        }
+      }
+
+      &-info {
+        @include flexJustifyStart;
+        gap: 104px;
+
+        @include onPhone {
+          @include flexColumn;
+          gap: 8px;
+        }
+      }
+
+      &-time {
+        span {
+          font-size: 14px;
+          color: $light-gray;
+        }
+      }
+
+      &-description {
+        span {
+          font-size: 14px;
+
+          @include onTablet {
+            font-size: 12px;
+          }
+        }
+
+        &-container {
+          @include flexColumn;
+          gap: 20px;
+        }
+
+        &-speaker {
+          @include flexAlignCenter;
+          gap: 6px;
+
+          span {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @include onTablet {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      &-break,
+      &-description-container,
+      &-title,
+      &-time {
+        flex: 0.5;
+      }
+
+      &-break,
+      &-time {
+        @include onPhone {
+          flex: none;
+        }
+      }
+
+      &-break {
+        span {
+          font-size: 16px;
+          color: $light-gray;
+          text-transform: uppercase;
+
+          @include onTablet {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &-schedule--break {
+      @include flexJustifyAlignBetween;
+      flex-direction: row;
+      gap: 104px;
+    }
+
+    &-goals {
+      @include flexJustifyAlignBetween;
+      gap: 20px;
+      width: 100%;
+
+      @include onTablet {
+        @include flexColumnAlignCenter;
+        gap: 56px;
+      }
+
+      &-container {
+        @include flexColumnAlignCenter;
+        gap: 72px;
+        padding: 0 112px;
+
+        @include onTablet {
+          gap: 58px;
+          padding: 0 20px;
+        }
+      }
+
+      &-subtitle {
+        max-width: 460px;
+
+        h4 {
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+    }
+
+    &-goal {
+      @include flexColumnAlignCenter;
+      gap: 14px;
+      width: 130px;
+
+      @include onTablet {
+        gap: 26px;
+      }
+
+      &-icon {
+        height: 130px;
+        width: 130px;
+
+        img {
+          display: block;
+          width: $full-width;
+          height: $full-height;
+          object-fit: contain;
+          object-position: bottom;
+        }
+      }
+
+      &-text {
+        font-size: 12px;
+        font-weight: 600;
+
+        @include onTablet {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__button-take-part {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
   }
 
   &__swiper-button {

@@ -188,6 +188,12 @@
   align-items: flex-start;
 }
 
+@mixin flexJustifyCenterAlignStart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 @mixin inlineFlexJustifyAlignCenter {
   display: inline-flex;
   justify-content: center;
