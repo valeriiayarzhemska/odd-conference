@@ -106,6 +106,28 @@ $(document).ready(function () {
     }
   );
 
+  const swiperConferencePartners = new Swiper('.conference__partners-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    grid: {
+      rows: 2,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+
+    navigation: {
+      nextEl: '.conference__partners-swiper-button-next',
+      prevEl: '.conference__partners-swiper-button-prev',
+    },
+  });
+
   // conference add target classes
   addNumberClassTarget();
 
