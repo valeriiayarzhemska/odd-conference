@@ -1486,9 +1486,11 @@
   &__form {
     @include flexColumn;
     gap: 26px;
+    padding-bottom: 58px;
 
     @include onPhone {
       gap: 30px;
+      padding-bottom: 0;
     }
 
     &-container {
@@ -1657,17 +1659,38 @@
   }
 
   &__footer {
+    position: relative;
     background-color: #444444;
-    
+
     &-content {
       @include flexJustifyAlignBetween;
-    }
-
-    &-logo {
-      padding: 22px 0;
+      padding-top: 40px;
+      padding-bottom: 22px;
 
       @include onPhone {
-        padding: 20px 0;
+        flex-wrap: wrap;
+        padding-top: 24px;
+        padding-bottom: 26px;
+      }
+    }
+
+    &-content::after {
+      @include onPhone {
+        content: '';
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #565656;
+      }
+    }
+
+    &-logo > a > img {
+      height: 40px;
+
+      img {
+        @include fullImageContainerContain;
       }
     }
 
@@ -1675,31 +1698,74 @@
       @include flexAlignCenter;
       gap: 15px;
       font-family: 'Lato', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
-      color: $black;
-
-      @include onTablet {
-        font-size: 14px;
-      }
+      color: $white;
     }
 
     &-list {
-      @include flexAlignCenter;
+      @include flexJustifyAlignCenter;
       gap: 20px;
 
-      @include onTablet {
-        display: none;
+      @include onPhone {
+        gap: 10px;
+        padding-top: 58px;
+        order: 1;
+        width: 100%;
       }
     }
 
     &-link {
       font-family: 'Lato', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
-      color: $black;
+      color: $white;
+    }
+
+    &-social-links,
+    &-rights {
+      @include flexJustifyAlignCenter;
+    }
+
+    &-social {
+      &-links {
+        gap: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #565656;
+      }
+
+      &-link {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        @include onPhone {
+          width: 32px;
+          height: 32px;
+        }
+
+        img {
+          @include fullImageContainerContain;
+        }
+      }
+    }
+
+    &-rights {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      @include onPhone {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 600;
+        color: #a8a8a8;
+      }
     }
   }
 }
